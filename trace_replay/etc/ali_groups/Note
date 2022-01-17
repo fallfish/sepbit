@@ -1,0 +1,10 @@
+Grouping:
+The aim of grouping volumes is to fully enjoy the memory-efficient indexmap
+implementation. The rationale is that a group of volumes have diverse workload
+patterns (skewed and non-skewed), thus caching can have a good hit ratio
+(overall a skewed workload).
+
+Content:
+The selected volumes are listed in order of file sizes.  As a result, the
+divide.py can evenly split them into groups so that we can parallel the
+simulation.
